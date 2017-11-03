@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MyApp.DataModels;
+using MyApp.Utils;
 
 namespace MyApp.DataModel
 {
@@ -9,8 +10,9 @@ namespace MyApp.DataModel
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseSqlite("Data Source=MyApp.db");
-            optionsBuilder.UseSqlServer(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=MyApp;User id = ****; password = ****;");
+            string DataSource = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=MyApp;User id = " + MyCredentials.DBUserName + "; password = " + MyCredentials.DBPasswword + ";";
+            //string DataSource = "Data Source=MyApp.db"
+            optionsBuilder.UseSqlServer(DataSource);
         }
     }
 
