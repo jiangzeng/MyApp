@@ -48,8 +48,14 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Grid x:Name="FirstGrid" Grid.Column="0" Grid.Row="0" Background="#0078d7"></Grid>
-        <Grid x:Name="SecondGrid" Grid.Column="1" Grid.Row="0" Background="#107C10"></Grid>
-        <Grid x:Name="ThirdGrid" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Background="#FFCD0009"></Grid>
+        <Grid x:Name="FirstGrid" Grid.Column="0" Grid.Row="0">
+            <Image Width="auto" Source="Assets/photo/cliff.jpg" />
+        </Grid>
+        <Grid x:Name="SecondGrid" Grid.Column="1" Grid.Row="0">
+            
+        </Grid>
+        <Grid x:Name="ThirdGrid" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Background="#FFCD0009">
+            
+        </Grid>
     </Grid>
 </Page>
